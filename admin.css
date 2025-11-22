@@ -1,0 +1,206 @@
+/* === Админ-панель в стиле Crumb & Co === */
+:root {
+  --primary-color: #a89f96;
+  --dark-color: #5d4e45;
+  --light-bg: #faf9f8;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--light-bg);
+  color: #444;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--dark-color);
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--dark-color);
+  margin: 24px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: #958a7e;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(168, 159, 150, 0.3);
+}
+
+.btn--danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn--danger:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+.btn--success {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn--success:hover {
+  background-color: #219653;
+}
+
+/* Секции */
+.section {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f8f6f4;
+}
+
+/* Формы */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(168, 159, 150, 0.1);
+}
+
+/* Таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+th, td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+  background-color: #f9f8f6;
+  color: var(--dark-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+tr:hover td {
+  background-color: #fcfbfa;
+}
+
+.status-new {
+  color: #e67e22;
+  font-weight: 500;
+}
+
+.status-processing {
+  color: #3498db;
+  font-weight: 500;
+}
+
+.status-completed {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+/* Алерты */
+.alert {
+  padding: 12px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.alert-success {
+  background-color: #e8f7e8;
+  color: #2e7d32;
+  border: 1px solid #c3e6cb;
+}
+
+/* Статус в селекте */
+select[name="status"] {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 0.9rem;
+  color: var(--dark-color);
+}
+
+select[name="status"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+  
+  .section {
+    padding: 18px;
+  }
+  
+  th, td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+}

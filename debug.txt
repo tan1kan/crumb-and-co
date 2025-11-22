@@ -1,0 +1,9 @@
+Array
+(
+    [register] => 1
+    [name] => tanya
+    [email] => qwert@gmail.com
+    [phone] => 12345678910
+    [password] => 123456
+    [confirm_password] => 123456
+)
